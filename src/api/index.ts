@@ -1,7 +1,7 @@
-import { getRoomList } from "./room"
+import room from "./room"
 
 const api = {
-  getRoomList
+  room
 }
 
 export default api

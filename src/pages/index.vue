@@ -7,7 +7,7 @@
   const api = inject<any>('$api')
 
   const getRoomList = () => {
-    api.getRoomList()
+    api.room.getRoomList()
     .then((res) => console.log(res.result))
   }
 
