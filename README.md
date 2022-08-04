@@ -1,6 +1,7 @@
 # Vite TypeScript Axios封裝
 
 ## Axios封裝
+- Axios實例封裝
 ```javascript
 // src/utils/AxiosInstance.ts
 import axios, { AxiosRequestConfig } from 'axios'
