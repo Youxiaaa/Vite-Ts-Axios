@@ -2,7 +2,7 @@
 
 ## Axios封裝
 - Axios實例封裝
-```javascript
+```TypeScript
 // src/utils/AxiosInstance.ts
 import axios, { AxiosRequestConfig } from 'axios'
 
@@ -55,7 +55,7 @@ class Http {
 export const http = new Http()
 ```
 - api封裝
-```javascript
+```TypeScript
 // src/api/room.ts
 // 取得 Axios 實例方法
 import { http } from '../utils/AxiosInstance'
@@ -77,7 +77,7 @@ export default api
 ```
 
 - Provide 到 Vue3 實例
-```javascript
+```TypeScript
 // src/main.ts
 import { createApp } from 'vue'
 
@@ -94,7 +94,7 @@ app
 
 ## 使用套件
 - unplugin-auto-import(自動 import 套件)
-```javascript
+```TypeScript
 // example
 // vite.config.ts
 import AutoImport from 'unplugin-auto-import/vite'
@@ -109,7 +109,7 @@ plugins: [
 ```
 
 - unplugin-vue-components(自動引入元件)
-```javascript
+```TypeScript
 // example
 // vite.config.ts
 import Components from 'unplugin-vue-components/vite'
@@ -122,7 +122,7 @@ plugins: [
 
 - vite-plugin-pages(路由套件)
 - vite-plugin-vue-layouts(佈局套件)
-```javascript
+```TypeScript
 // example
 // vite.config.ts
 import Pages from 'vite-plugin-pages'
