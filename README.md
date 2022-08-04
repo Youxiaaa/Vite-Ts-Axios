@@ -93,9 +93,8 @@ app
 ```
 
 ## 使用套件
-- unplugin-auto-import(自動 import 套件)
+- unplugin-auto-import(自動import)
 ```TypeScript
-// example
 // vite.config.ts
 import AutoImport from 'unplugin-auto-import/vite'
 
@@ -106,6 +105,25 @@ plugins: [
     dts: 'src/auto-imports.js'
   })
 ]
+
+// example
+<script lang="ts" setup>
+  // 不需 import { inject } from 'vue'
+  const api = inject<any>('$api')
+
+  const query = {
+    pageNo: 1,
+    pageSize: 3
+  }
+
+  function getRoomList (): void {
+    api.room.getRoomList(query)
+    .then((res: any) => console.log(res.result))
+    .catch((err: any) => console.log(err))
+  }
+
+  getRoomList()
+</script>
 ```
 
 - unplugin-vue-components(自動引入元件)
